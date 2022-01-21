@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/dfa318b640.js" crossorigin="anonymous"></script>
+    <title>Home Page</title>
+    <style>
+        *{
+            font-family: ProximaNova-Regular,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+            font-weight: normal;
+        }
+         /* Navigation bar */
+         #navbar_1{
+            height: 50px;
+            background-color: black;
+            display: flex;
+        }
+        .navbar_2{
+            display: flex;
+        }
+        .navbar_2>div{
+            /* border: blanchedalmond solid 1px; */
+            height: 50px;
+            width: 130px;
+            margin-left: 40px;
+        }
+        .navbar_3{
+            display: flex;
+            margin-left: 500px;
+        }
+        .navbar_3>div{
+            /* border: red solid 1px; */
+            height: 50px;
+            width: 100px;
+        }
+        .navbar_2>div>h4{
+            color: white;
+        }
+        .navbar_3>div>h5{
+            color: white;
+            text-align: right;
+        }
+        #navbar_4{
+            /* border: darkblue solid 1px; */
+            height: 80px;
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(219, 217, 217);
+            cursor: pointer;
+        }
+        .topnav {
+            overflow: hidden;
+        }
+
+        .topnav .search-container {
+            float: right;
+        }
+
+        .topnav input[type=text] {
+            padding: 6px 80px;
+            margin-top: 15px;
+            font-size: 17px;
+            border: none;
+        
+        }
+
+        .topnav .search-container button:hover {
+             background: #ccc;
+        }
+        #navbar_5{
+            /* border: darkblue solid 1px; */
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #container_1{
+            width: 95%;
+            /* border: solid red 1px; */
+            margin: auto;
+        }
+        /* Deal Box */
+        #dealbox{
+            /* border: black solid 1px; */
+        }
+        .dealbox_2{
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            grid-template-rows: repeat(1,1fr);
+            grid-gap: 20px;
+        }
+        .dealbox_2>div{
+            /* border: black solid 1px; */
+            height: 190px;
+
+        }
+        .imgratio{
+            width: 100%;
+            height: 100%;
+        }
+
+        /* flatCode Box */
+
+        #underline{
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+        #flatcodebox>img{
+            /* margin: auto; */
+            margin-left: 15px;
+            /* border: teal solid 1px; */
+        }
+
+        /* Big Deal */
+
+        #bigdealbox{
+            /* border: black solid 1px; */
+        }
+        .bigdealbox_2{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(1,1fr);
+            grid-gap: 20px;
+        }
+        .bigdealbox_2>div{
+            /* border: red solid 1px; */
+            height: 400px;
+        }
+        .bestsellers_1{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(1,1fr);
+            grid-gap: 20px;
+
+        }
+        .bestsellers_1>div{
+            /* border: solid teal 1px; */
+            height: 500px;
+        }
+        .departmentbox{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(1,1fr);
+            grid-gap: 20px;
+        }
+        .departmentbox>div{
+            /* border: solid 1px black; */
+        }
+        .bestsellers_2{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(1,1fr);
+            grid-gap: 20px;
+        }
+        .bestsellers_2>div{
+            /* border: rebeccapurple solid 1px; */
+            height: 300px;
+            
+        }
+        .bestsellers_2{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(1,1fr);
+            grid-gap: 20px;
+        }
+        .bestsellers_2>div{
+            /* border: black solid 1px; */
+        }
+        input{
+            width: 200px;
+            height: 40px;
+        }
+        #subscribebutton{
+            width: 150px;
+            height: 41px;
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+        #footer_1{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(2,1fr);
+            grid-gap: 20px;
+        }
+        #footer_1>div{
+            /* border: black solid 1px; */
+        }
+        #footer_1>div>h3{
+            font-weight: bold;
+        }
+        #footer_1>div>p{
+            color: rgb(97, 94, 94);
+            font-size: 15px;
+            line-height: 10px;
+        }
+        #moveingimg{
+            margin-left: 15px;margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="navbar_1">
+            <div class="navbar_2">
+                <div>
+                    <h4>Free Shipping</h4>
+                </div>
+                <div>
+                    <h4>Click & Collect</h4>
+                </div>
+                <div>
+                    <h4>Return To Store</h4>
+                </div>
+            </div>
+            <div class="navbar_3">
+                <div>
+                    <h5>Download</h5>
+                </div>
+                <div>
+                    <h5>Store Locator</h5>
+                </div>
+                <div>
+                    <h5>Help</h5>
+                </div>
+            </div>
+        </div>
+
+        <div id="navbar_4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIqLdSG_DkYbMHe1n9Rb7dzDuH37SQuDp_WKHoI2MwMzz8wSAv" alt="" height="100%" >
+            <h3>Women</h3>
+            <h3>Men</h3>
+            <h3>Kids</h3>
+            <h3>Shoes & Bags</h3>
+            <div class="topnav">
+                <div class="search-container">
+                <form>
+                    <input type="text" placeholder="What are you looking for?" name="search">
+                </form>
+                </div>
+            </div> 
+            <h3>Sign In</h3>
+            <h3>Basket <i class="fas fa-shopping-bag"></i></h3>
+
+        </div>
+
+        <div id="navbar_5">
+            <p>Ethnic & Fusion Wear</p>
+            <p>Westrn Wear</p>
+            <p>Lingerie/Sleepwear</p>
+            <p>Top Brands</p>
+            <p>SportsWear</p>
+            <p>PlusSize</p>
+            <p>WinterWear</p>
+            <p>SizeStore</p>
+            <p>Beauty</p>
+            <p>Footwear/Bags</p>
+            <p>Watches</p>
+            <p>Jewellery</p>
+            <p>|</p>
+            <p>More</p>
+
+        </div>
+    </div>
+
+   
+
+    <div id="container_1">
+        <div id="moveingimg">
+            <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/HP_LS_Women_Desktop-1-19Jan2022.jpg" alt="">
+        </div> <br>
+        <div id="dealbox">
+            <h1>Deal Coner</h1>
+            <div class="dealbox_2">
+                <div id="nextpage">
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-D-1-Women-Desktop-14Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div onclick="window.location.href='women_page.html'">
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-D-2-Women-Desktop-14Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div  onclick="window.location.href='women_page.html'">
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-D-3-Women-Desktop-14Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div  onclick="window.location.href='women_page.html'">
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-D-4-Women-Desktop-14Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div  onclick="window.location.href='women_page.html'">
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-D-5-Women-Desktop-23Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div  onclick="window.location.href='women_page.html'">
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-D-6-Women-Desktop-14Dec2021.jpg" alt="" class="imgratio">
+                </div>
+            </div>
+        </div>
+
+        <hr id="underline">
+
+        <div id="flatcodebox">
+            <img src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-10modblock-oneBythree-A-commonstripBanner1-15Jan2022.jpg" alt="">
+        </div>
+
+        <hr id="underline">
+
+        <div id="dealbox">
+            <h1>Top Trending Brands</h1>
+            <div class="dealbox_2">
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-B-1-Women-Desktop-17Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-B-2-Women-Desktop-17Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-B-3-Women-Desktop-17Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-B-4-Women-Desktop-24Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-B-5-Women-Desktop-15Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-B-6-Women-Desktop-23Dec2021.jpg" alt="" class="imgratio">
+                </div>
+            </div>
+        </div>
+
+        <hr id="underline">
+
+        <div id="flatcodebox">
+            <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-women-9modblock-StripBanner2-D-13Jan2022.gif" alt="">
+        </div>
+
+        <hr id="underline">
+
+        <div id="flatcodebox">
+            <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-modularblock-oneBytwo1A-Women-07Jan2022.gif" alt="">
+        </div>
+
+        <hr id="underline">
+
+        <div id="dealbox">
+            <h1>Top Trending Brands</h1>
+            <div class="dealbox_2">
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-9-Desktop-Women-14Jan2022.gif" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-1-Desktop-Women-15Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-12-Desktop-Women-15Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-2-Desktop-Women-15Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-3-Desktop-Women-15Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-4-Desktop-Women-15Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-5-Desktop-Women-15Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-6-Desktop-Women-15Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-7-Desktop-Women-15Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-8-Desktop-Women-14Jan2022A.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-10-Desktop-Women-13Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-11-Desktop-Women-13Dec2021.jpg" alt="" class="imgratio">
+                </div>
+            </div>
+        </div>
+
+        <hr id="underline">
+
+        <div id="bigdealbox">
+            <h1>Big Brands. Big Deals </h1>
+            <div class="bigdealbox_2">
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-8modblock-oneBythree-A-Women-24Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-8modblock-oneBythree-B-Women-24Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-8modblock-oneBythree-C-Women-24Dec2021.jpg" alt="" class="imgratio">
+                </div>
+            </div>
+        </div>
+
+        <hr id="underline">
+
+        <div id="bigdealbox">
+            <h1>Top Picks</h1>
+            <div class="bigdealbox_2">
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-Women-modblock-oneBythree-D-07Jan2022.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-Women-modblock-oneBythree-E-07Jan2022.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-Women-modblock-oneBythree-F-07Jan2022.jpg" alt="" class="imgratio">
+                </div>
+            </div>
+        </div>
+
+        <hr id="underline">
+
+        <div id="bigdealbox">
+            <h1>Limied Hour Deals</h1>
+            <div class="bigdealbox_2">
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-women-modularblock-oneBythree-A-17Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-women-modularblock-oneBythree-B-16Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-women-modularblock-oneBythree-C-27Dec2021.jpg" alt="" class="imgratio">
+                </div>
+            </div>
+        </div>
+
+        <hr id="underline">
+
+        <div id="bigdealbox">
+            <h1>Trending Ethnic Wear</h1>
+            <div class="bigdealbox_2">
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-13modblock-oneBythree-A-Women-07Jan2022.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-13modblock-oneBythree-B-Women-07Jan2022.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-13modblock-oneBythree-C-Women-07Jan2022.jpg" alt="" class="imgratio">
+                </div>
+            </div>
+        </div>
+
+        <hr id="underline">
+
+        <div id="bigdealbox">
+            <h1>Occasion Edit</h1>
+            <div class="bigdealbox_2">
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-14modularblock-oneBythree-A-Women-11Nov2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-14modularblock-oneBythree-B-Women-11Nov2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-14modularblock-oneBythree-C-Women-28Dec2021.jpg" alt="" class="imgratio">
+                </div>
+            </div>
+        </div>
+
+        <hr id="underline">
+
+        <div id="bigdealbox">
+            <h1>Lowest Price Ever</h1>
+            <div class="bigdealbox_2">
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-6modblk-oneBythree-A-Women-16Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-6modblk-oneBythree-B-Women-16Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-6modblk-oneBythree-C-Women-16Dec2021.jpg" alt="" class="imgratio">
+                </div>
+            </div>
+        </div>
+
+        <hr id="underline">
+
+        <div id="bigdealbox">
+            <h1>Fashion Essentials</h1>
+            <div>
+                <img src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-women-modularblock1-A-14Jan2022.jpg" alt="" class="imgratio">
+            </div>
+        </div>
+
+
+        <hr id="underline">
+
+        <div id="bigdealbox">
+            <h1>Editor's Curated Styles</h1>
+            <div class="bigdealbox_2">
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-modblock7-oneBythree-A-Women-03Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-modblock7-oneBythree-B-Women-03Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=1232,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-modblock7-oneBythree-C-Women-03Dec2021.jpg" alt="" class="imgratio">
+                </div>
+            </div>
+        </div>
+
+        <hr id="underline">
+
+        <div id="dealbox">
+            <h1>Beauty Corner</h1>
+            <div class="dealbox_2">
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-E-1-Women-Desktop-05Jan2022.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-E-2-Women-Desktop-16Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-E-3-Women-Desktop-05Jan2022.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-E-4-Women-Desktop-22Dec2021A.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-E-5-Women-Desktop-16Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=288,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/PC-E-6-Women-Desktop-16Dec2021.jpg" alt="" class="imgratio">
+                </div>
+            </div>
+        </div>
+
+        <hr id="underline">
+
+        <div id="bigdealbox">
+            <h1>Best Sellers</h1>
+            <div class="bestsellers_1">
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=616,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-5modblock-oneBytwo1-C-Women-12Nov2021A.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=616,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-5modblock-oneBytwo1-D-Women-11Jan2022.jpg" alt="" class="imgratio">
+                </div>
+            </div>
+        </div>
+
+        <hr id="underline">
+
+        <div id="bigdealbox">
+            <h1>Shop By Department</h1>
+            <div class="departmentbox">
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-11modblock-oneBythree-A-Women-16Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-11modblock-oneBythree-B-Women-16Dec2021.jpg" alt="" class="imgratio">
+                </div>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/w=500,q=60,fit=cover/https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/LS-Fest/LS-new/desktop-dept-11modblock-oneBythree-C-Women-16Dec2021.jpg" alt="" class="imgratio">
+                </div>
+            </div>
+        </div>
+
+        <hr id="underline">
+
+
+
+
+
+            <!-- Footer Part  -->
+        <div>
+            <div class="bestsellers_2">
+                <div>
+                    <h2>Subscribe to our awesome emails.</h2>
+                    <h4>Get our latest offers and news straight in your inbox.</h4>
+                    <input type="type" placeholder="Please enter an email address">
+                    <input type="Subscribe" placeholder="Subscribe" id="subscribebutton">
+                </div>
+                <div>
+                    <h2>Download our apps</h2>
+                    <h4>Shop our products and offers on-the-go.</h4>
+                    <img src="https://miro.medium.com/max/1200/1*V9-OPWpauGEi-JMp05RC_A.png" alt="" height="50px">
+                    <img src="https://miro.medium.com/max/1200/1*OIIv4FEjJQMqh-zEPhtlYA.png" alt="" height="50px">
+                </div>
+            </div>
+        </div>
+
+        <hr id="underline">
+
+        <div id="footer_1">
+            <div>
+                <h3>Women</h3>
+                <p>Top</p>
+                <p>Ethnicwear</p>
+                <p>Bottoms</p>
+                <p>Dresses & Jumpsits</p>
+                <p>Winterwear</p>
+                <p>Lingries</p>
+                <p>Nightwear</p>
+                <p>Sportwear</p>
+                <p>Beauty</p>
+                <p>Watches & Sunglasses</p>
+            </div>
+            <div>
+                <h3>Men</h3>
+                <p>Tops</p>
+                <p>Bottoms</p>
+                <p>Ethnicwear</p>
+                <p>Sportwear</p>
+                <p>Innerware</p>
+                <p>Grooming</p>
+                <p>Watches</p>
+                <p>Sunglasses</p>
+            </div>
+            <div>
+                <h3>Kids</h3>
+                <p>Girls Clothing</p>
+                <p>Boys Clothing</p>
+                <p>Infrants Girls</p>
+                <p>Infrants Boys</p>
+                <p>Winterwear</p>
+                <p>Add ons</p>
+                <p>The teen Shop</p>
+            </div>
+            <div>
+                <h3>Shoes & Bags</h3>
+                <p>Women</p>
+                <p>Men</p>
+                <p>Boys</p>
+                <p>Girls</p>
+                <p>Women Accessories</p>
+                <p>Men Accessories</p>
+                <p></p>
+            </div>
+            <div>
+                <h3>Explore</h3>
+                <p>Online offer</p>
+                <p>Store offer</p>
+                <p>Online gift card</p>
+                <p>Store Nearby</p>
+                <p>Edge Membership</p>
+                <p>Refer & Win</p>
+                <p>Shop on WhatsApp</p>
+                <p>Fashion Vlog</p>
+                <p>Join CIRCLEMANG</p>
+                <p>SBI offers</p>
+                <p>Homecentre</p>
+            </div>
+            <div>
+                <h3>About</h3>
+                <p>About Us</p>
+                <p>Careers</p>
+                <p>Take a Tour</p>
+                <p>Blog</p>
+                <p>Store Locator</p>
+                <p>Landmark Cares</p>
+            </div>
+            <div>
+                <h3>Help</h3>
+                <p>Contact us</p>
+                <p>Shipping</p>
+                <p>Return Process</p>
+                <p>Return Policy</p>
+                <p>Help Centre</p>
+            </div>
+        </div>
+
+        <hr id="underline">
+
+        
+
+    </div>
+</body>
+</html>
+
+<script>
+    document.querySelector("#nextpage").addEventListener("click",function(){
+        window.location.href = "women_page.html";
+    });
+
+</script>

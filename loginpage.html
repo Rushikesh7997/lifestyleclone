@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>myAccount_page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      *{
+            font-family: ProximaNova-Regular,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+            font-weight: normal;
+        }
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+      /* Nav CSS */
+      .pages {
+        display: flex;
+        justify-content: space-between;
+      }
+      .left {
+        display: flex;
+      }
+      .right {
+        display: flex;
+      }
+      .left > div {
+        margin: 0px 8px;
+        padding: 10px;
+      }
+      .right > div {
+        margin: 0px 8px;
+        padding: 10px;
+      }
+      /* header css */
+      /* icon */
+      .icon {
+        display: flex;
+      }
+      .icon > i {
+        margin: 0px 10px;
+      }
+      .policy {
+        display: flex;
+        margin-top: 15px;
+      }
+      .policy > p {
+        margin-top: 0px;
+      }
+      /* footer */
+      footer {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        font-size: larger;
+      }
+      footer > div {
+        display: flex;
+      }
+
+      /* SIGN UP FORM */
+      #radio {
+        font-weight: bold;
+      }
+      #form > input {
+        font-weight: bold;
+        padding: 10px 50px;
+
+      }
+      #signup_details {
+        display: flex;
+        width: 60%;
+        justify-content: space-around;
+        margin: auto;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        text-align: center;
+        padding-left: 300px;
+        padding-bottom: 50px;
+      }
+      .DOB {
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        padding: 3px;
+        font-weight: bold;
+      }
+      .submit {
+        background-color: #faa619;
+        color: white;
+        padding: 10px 15px;
+      }
+      .contleft {
+        width: 45%;
+      }
+      .contright {
+        width: 45%;
+      }
+      .agree_terms {
+        display: flex;
+      }
+
+      .check_p {
+        margin-top: 0px;
+      }
+      .vertical_line {
+        width: 1px;
+        background-color: black;
+        height: 550px;
+      }
+      /* login details */
+      #navbar_1{
+            height: 50px;
+            background-color: black;
+            display: flex;
+        }
+        .navbar_2{
+            display: flex;
+        }
+        .navbar_2>div{
+            /* border: blanchedalmond solid 1px; */
+            height: 50px;
+            width: 130px;
+            margin-left: 40px;
+        }
+        .navbar_3{
+            display: flex;
+            margin-left: 500px;
+        }
+        .navbar_3>div{
+            /* border: red solid 1px; */
+            height: 50px;
+            width: 100px;
+        }
+        .navbar_2>div>h4{
+            color: white;
+        }
+        .navbar_3>div>h5{
+            color: white;
+            text-align: right;
+        }
+        #navbar_4{
+            /* border: darkblue solid 1px; */
+            height: 80px;
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(219, 217, 217);
+            cursor: pointer;
+        }
+        .topnav {
+            overflow: hidden;
+        }
+
+        .topnav .search-container {
+            float: right;
+        }
+
+        .topnav input[type=text] {
+            padding: 6px 80px;
+            margin-top: 15px;
+            font-size: 17px;
+            border: none;
+        
+        }
+
+        .topnav .search-container button:hover {
+             background: #ccc;
+        }
+        #navbar_5{
+            /* border: darkblue solid 1px; */
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .bestsellers_2{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(1,1fr);
+            grid-gap: 20px;
+        }
+        .bestsellers_2>div{
+            /* border: rebeccapurple solid 1px; */
+            height: 300px;
+            
+        }
+        .bestsellers_2{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(1,1fr);
+            grid-gap: 20px;
+        }
+        .subscribebox12{
+            width: 200px;
+            height: 40px;
+        }
+        #subscribebutton{
+            width: 150px;
+            height: 41px;
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+        #footer_1{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(2,1fr);
+            grid-gap: 20px;
+        }
+        #footer_1>div>h3{
+            font-weight: bold;
+        }
+        #footer_1>div>p{
+            color: rgb(97, 94, 94);
+            font-size: 15px;
+            line-height: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div id="navbar_1">
+        <div class="navbar_2">
+            <div>
+                <h4>Free Shipping</h4>
+            </div>
+            <div>
+                <h4>Click & Collect</h4>
+            </div>
+            <div>
+                <h4>Return To Store</h4>
+            </div>
+        </div>
+        <div class="navbar_3">
+            <div>
+                <h5>Download</h5>
+            </div>
+            <div>
+                <h5>Store Locator</h5>
+            </div>
+            <div>
+                <h5>Help</h5>
+            </div>
+        </div>
+    </div>
+
+    <div id="navbar_4">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIqLdSG_DkYbMHe1n9Rb7dzDuH37SQuDp_WKHoI2MwMzz8wSAv" alt="" height="100%" >
+        <h3>Women</h3>
+        <h3>Men</h3>
+        <h3>Kids</h3>
+        <h3>Shoes & Bags</h3>
+        <div class="topnav">
+            <div class="search-container">
+            <form>
+                <input type="text" placeholder="What are you looking for?" name="search">
+            </form>
+            </div>
+        </div> 
+        <h3>Sign In</h3>
+        <h3>Basket <i class="fas fa-shopping-bag"></i></h3>
+
+    </div>
+
+    <div id="navbar_5">
+        <p>Ethnic & Fusion Wear</p>
+        <p>Westrn Wear</p>
+        <p>Lingerie/Sleepwear</p>
+        <p>Top Brands</p>
+        <p>SportsWear</p>
+        <p>PlusSize</p>
+        <p>WinterWear</p>
+        <p>SizeStore</p>
+        <p>Beauty</p>
+        <p>Footwear/Bags</p>
+        <p>Watches</p>
+        <p>Jewellery</p>
+        <p>|</p>
+        <p>More</p>
+
+    </div>
+</div>
+  </div>
+    <div id="container">
+      
+         
+      
+      
+
+            
+      </div>
+      <h3 class="sale70" style="text-align: center">
+        GEt 10% off your order when you spent over $600
+      </h3>
+      <!-- hr ------------------------------------------------------------>
+      <hr />
+    </div>
+
+    <!--SIGN UP Form  -->
+    <div id="signup_details">
+      <div class="contleft">
+        <h3>REGISTRATION</h3>
+        <div id="radio">
+          <input type="radio" name="gender" value="male" />Mr.
+          <input type="radio" name="gender" value="female" />Ms.
+          <input type="radio" name="gender" value="female" />Mrs.
+        </div>
+
+        <form id="form">
+          <br />
+          <input
+            type="text"
+            class="first_name"
+            placeholder="First Name"
+          /><br />
+          <br />
+          <input type="text" class="last_name" placeholder="Last Name" /><br />
+          <br />
+          <input type="text" class="email" placeholder="Enter Email" /> <br />
+          <br />
+          <input type="password" class="pass" placeholder="Enter password" />
+          <br />
+          <br />
+          <input type="text" class="country" placeholder="Country" /> <br />
+          <br />
+          <input type="text" class="english" placeholder="Language" /> <br />
+          <br />
+          Date of Birth <br> <br>
+          <input class="DOB" type="date" placeholder="DD/MM/YYYY" />
+          <br />
+          <br />
+          <div class="agree_terms">
+            <input type="checkbox" />
+            <p class="check_p">
+              I agree that may insert analytical web beacons into the
+              newsletter and create a personalized user profile based on my
+              purchase and usage behavior, including sending a notification when
+              I have placed something in the shopping cart. Further details can
+              be found in our Privacy Policy, clause 5. I understand that I can
+              revoke my consent at any time by emailing privacy
+            </p>
+          </div>
+          <input type="submit" class="submit" value="SIGN UP HERE" />
+        </form>
+      </div>
+      <div>
+      </div>
+      <div class="contright">
+        <!-- LOGIN form -->
+      </div>
+    </div>
+    <div>
+      <div class="bestsellers_2">
+          <div>
+              <h2>Subscribe to our awesome emails.</h2>
+              <h4>Get our latest offers and news straight in your inbox.</h4>
+              <input type="type" placeholder="Please enter an email address" class="subscribebox12">
+              <input type="Subscribe" placeholder="Subscribe" id="subscribebutton">
+          </div>
+          <div>
+              <h2>Download our apps</h2>
+              <h4>Shop our products and offers on-the-go.</h4>
+              <img src="https://miro.medium.com/max/1200/1*V9-OPWpauGEi-JMp05RC_A.png" alt="" height="50px">
+              <img src="https://miro.medium.com/max/1200/1*OIIv4FEjJQMqh-zEPhtlYA.png" alt="" height="50px">
+          </div>
+      </div>
+  </div>
+
+  <hr id="underline">
+
+  <div id="footer_1">
+      <div>
+          <h3>Women</h3>
+          <p>Top</p>
+          <p>Ethnicwear</p>
+          <p>Bottoms</p>
+          <p>Dresses & Jumpsits</p>
+          <p>Winterwear</p>
+          <p>Lingries</p>
+          <p>Nightwear</p>
+          <p>Sportwear</p>
+          <p>Beauty</p>
+          <p>Watches & Sunglasses</p>
+      </div>
+      <div>
+          <h3>Men</h3>
+          <p>Tops</p>
+          <p>Bottoms</p>
+          <p>Ethnicwear</p>
+          <p>Sportwear</p>
+          <p>Innerware</p>
+          <p>Grooming</p>
+          <p>Watches</p>
+          <p>Sunglasses</p>
+      </div>
+      <div>
+          <h3>Kids</h3>
+          <p>Girls Clothing</p>
+          <p>Boys Clothing</p>
+          <p>Infrants Girls</p>
+          <p>Infrants Boys</p>
+          <p>Winterwear</p>
+          <p>Add ons</p>
+          <p>The teen Shop</p>
+      </div>
+      <div>
+          <h3>Shoes & Bags</h3>
+          <p>Women</p>
+          <p>Men</p>
+          <p>Boys</p>
+          <p>Girls</p>
+          <p>Women Accessories</p>
+          <p>Men Accessories</p>
+          <p></p>
+      </div>
+      <div>
+          <h3>Explore</h3>
+          <p>Online offer</p>
+          <p>Store offer</p>
+          <p>Online gift card</p>
+          <p>Store Nearby</p>
+          <p>Edge Membership</p>
+          <p>Refer & Win</p>
+          <p>Shop on WhatsApp</p>
+          <p>Fashion Vlog</p>
+          <p>Join CIRCLEMANG</p>
+          <p>SBI offers</p>
+          <p>Homecentre</p>
+      </div>
+      <div>
+          <h3>About</h3>
+          <p>About Us</p>
+          <p>Careers</p>
+          <p>Take a Tour</p>
+          <p>Blog</p>
+          <p>Store Locator</p>
+          <p>Landmark Cares</p>
+      </div>
+      <div>
+          <h3>Help</h3>
+          <p>Contact us</p>
+          <p>Shipping</p>
+          <p>Return Process</p>
+          <p>Return Policy</p>
+          <p>Help Centre</p>
+      </div>
+  </div>
+    <br />
+    <hr />
+    
+        <p>Follow us on</p>
+        <div class="icon">
+          <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+          <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+          <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+          <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+          <i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+    <br />
+    <hr />
+
+    <footer>
+      <p>copyright © 2006-2022 </p>
+      <div class="term">
+        <p>terms of use</p>
+        <p>privacy policy</p>
+        <p>imprint</p>
+      </div>
+    </footer>
+  </body>
+</html>
+<script>
+  document.querySelector("#form").addEventListener("submit", signinDetails);
+  userArray = JSON.parse(localStorage.getItem("newUser")) || [];
+  // console.log(userArray);
+  function signinDetails(event) {
+    event.preventDefault();
+    var firstName = document.querySelector(".first_name").value;
+    var lastName = document.querySelector(".last_name").value;
+    var email = document.querySelector(".email").value;
+    var pass = document.querySelector(".pass").value;
+    var dob = document.querySelector(".DOB").value;
+    var userObj = {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      pass: pass,
+      dob: dob,
+    };
+    userArray.push(userObj);
+    localStorage.setItem("newUser", JSON.stringify(userArray));
+    window.location.href = "signinpage.html";
+  }
+
+ 
+</script>

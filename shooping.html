@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/dfa318b640.js" crossorigin="anonymous"></script>
+    <title>Product page</title>
+    <style>
+        *{
+            font-family: ProximaNova-Regular,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+            font-weight: normal;
+
+        }
+        .container{
+            width: 95%;
+            /* border: 1px solid red;  */
+            margin: auto;  
+        }
+        .mainbox_1{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,1fr);
+            /* border: blue solid 1px; */
+        }
+        .mainbox_1>div{
+            /* border: solid black 1px; */
+        }
+        .imgratio_3{
+            width: 400px;
+        }
+        .plaintext{
+            font-size: 15px;
+            font-weight: normal;
+            color: rgb(158, 158, 172);
+        }
+        .pricetag{
+            color: rgb(242, 81, 57);
+            /* font-size: 28px; */
+        }
+        .js01{
+            color: rgb(158, 158, 172);
+            text-decoration: line-through;
+        }
+        .js02{
+            font-size: 13px;
+            text-decoration: underline;
+            color: #faa619;
+        }
+        .js03{
+            height: 70px;
+            width: 70px;
+            border: #faa619 solid 3px;
+            margin-left: 10px;
+        }
+        .js04{
+            display: flex;
+        }
+        .js05{
+            border: #D6D8F0 solid 2px;
+            height: 10px;
+            width: 10px;
+            margin-left: 15px;
+            padding: 25px;
+            
+        }
+        .js06{
+            display: flex;
+        }
+        .js07{
+            border: grey solid 1px;
+            height: 12px;
+            width: 13px;
+            margin-left: 15px;
+            margin-top: 15px;
+            padding: 25px;
+        }
+        #js08{
+            /* border: BLACK solid 1px; */
+            background-color: #faa619;
+            color: white;
+            /* width: 300px; */
+            /* height: 50px; */
+            margin-top: 15px;
+            margin-left: 15px;
+            /* text-align: center; */
+            padding: 20px 90px;
+        }
+        .js09{
+            font-size: 14px;
+        }
+        .js10{
+            display: flex;
+        }
+        .js11{
+            /* border: black solid 1px; */
+            background-color: #faa619;
+            color: white;
+            padding: 15px;
+            margin-left: 15px;
+        }
+        .js12{
+            height: 50px;
+            width: 250px;
+        }
+        .js13{
+            background-color: rgba(243, 146, 146, 0.39);
+            color: red;
+            width: 200px;
+        }
+        .js14{
+            text-decoration: underline;
+        }
+        .js16{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(1,1fr);
+            grid-gap: 10px;
+        }
+        .js16>div{
+            /* border: red solid 1px; */
+            height: 400px;
+            width: 300px;
+        }
+        .imgratio1{
+            height: 75%;
+            width: 100%;
+        }
+        .bestsellers_2{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(1,1fr);
+            grid-gap: 20px;
+        }
+        .bestsellers_2>div{
+            /* border: rebeccapurple solid 1px; */
+            height: 300px;
+            
+        }
+        .bestsellers_2{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(1,1fr);
+            grid-gap: 20px;
+        }
+        .bestsellers_2>div{
+            /* border: black solid 1px; */
+        }
+        input{
+            width: 200px;
+            height: 40px;
+        }
+        #subscribebutton{
+            width: 150px;
+            height: 41px;
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+        #footer_1{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(2,1fr);
+            grid-gap: 20px;
+        }
+        #footer_1>div{
+            /* border: black solid 1px; */
+        }
+        #footer_1>div>h3{
+            font-weight: bold;
+        }
+        #footer_1>div>p{
+            color: rgb(97, 94, 94);
+            font-size: 15px;
+            line-height: 10px;
+        }
+        #navbar_1{
+            height: 50px;
+            background-color: black;
+            display: flex;
+        }
+        .navbar_2{
+            display: flex;
+        }
+        .navbar_2>div{
+            /* border: blanchedalmond solid 1px; */
+            height: 50px;
+            width: 130px;
+            margin-left: 40px;
+        }
+        .navbar_3{
+            display: flex;
+            margin-left: 500px;
+        }
+        .navbar_3>div{
+            /* border: red solid 1px; */
+            height: 50px;
+            width: 100px;
+        }
+        .navbar_2>div>h4{
+            color: white;
+        }
+        .navbar_3>div>h5{
+            color: white;
+            text-align: right;
+        }
+        #navbar_4{
+            /* border: darkblue solid 1px; */
+            height: 80px;
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(219, 217, 217);
+            cursor: pointer;
+        }
+        .topnav {
+            overflow: hidden;
+        }
+
+        .topnav .search-container {
+            float: right;
+        }
+
+        .topnav input[type=text] {
+            padding: 6px 80px;
+            margin-top: 15px;
+            font-size: 17px;
+            border: none;
+        
+        }
+
+        .topnav .search-container button:hover {
+             background: #ccc;
+        }
+        #navbar_5{
+            /* border: darkblue solid 1px; */
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="navbar_1">
+            <div class="navbar_2">
+                <div>
+                    <h4>Free Shipping</h4>
+                </div>
+                <div>
+                    <h4>Click & Collect</h4>
+                </div>
+                <div>
+                    <h4>Return To Store</h4>
+                </div>
+            </div>
+            <div class="navbar_3">
+                <div>
+                    <h5>Download</h5>
+                </div>
+                <div>
+                    <h5>Store Locator</h5>
+                </div>
+                <div>
+                    <h5>Help</h5>
+                </div>
+            </div>
+        </div>
+
+        <div id="navbar_4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIqLdSG_DkYbMHe1n9Rb7dzDuH37SQuDp_WKHoI2MwMzz8wSAv" alt="" height="100%" >
+            <h3>Women</h3>
+            <h3>Men</h3>
+            <h3>Kids</h3>
+            <h3>Shoes & Bags</h3>
+            <div class="topnav">
+                <div class="search-container">
+                <form>
+                    <input type="text" placeholder="What are you looking for?" name="search">
+                </form>
+                </div>
+            </div> 
+            <h3>Sign In</h3>
+            <h3>Basket <i class="fas fa-shopping-bag"></i></h3>
+
+        </div>
+
+        <div id="navbar_5">
+            <p>Ethnic & Fusion Wear</p>
+            <p>Westrn Wear</p>
+            <p>Lingerie/Sleepwear</p>
+            <p>Top Brands</p>
+            <p>SportsWear</p>
+            <p>PlusSize</p>
+            <p>WinterWear</p>
+            <p>SizeStore</p>
+            <p>Beauty</p>
+            <p>Footwear/Bags</p>
+            <p>Watches</p>
+            <p>Jewellery</p>
+            <p>|</p>
+            <p>More</p>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="mainbox_1" >
+            <div>
+                <img src="https://lmsin.net/cdn-cgi/image/h=831,w=615,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000009689368-Green-DarkGreen-1000009689368_01-2100.jpg" alt="" class="imgratio_3">
+            </div>
+            <div>
+                <img src="https://lmsin.net/cdn-cgi/image/h=831,w=615,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000009689368-Green-DarkGreen-1000009689368_02-2100.jpg" alt="" class="imgratio_3">
+            </div>
+            <div>
+                <h1 class="pricetag">₹1149 <span class="plaintext">Inclusive of all taxes</span></h1>
+                <p> <span class="js01">₹ 2299 </span> | Save ₹ 1150 (50.02%)</p>
+                <p class="js02">Free Shipping on all orders</p>
+                <br>
+                <p>Color: Green</p>
+                <div>
+                    <img src="https://lmsin.net/cdn-cgi/image/h=831,w=615,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000009689368-Green-DarkGreen-1000009689368_01-2100.jpg" alt="" class="js03">
+                </div>
+                <p>Size</p>
+                <div class="js04">
+                    <div class="js05">XS</div>
+                    <div class="js05">S</div>
+                    <div class="js05">M</div>
+                    <div class="js05">L</div>
+                    <div class="js05">XL</div>
+                </div>
+                <div class="js06">
+                    <div class="js07">1</div>
+                    <button id="js08">ADD TO BASKET</button>
+                </div>
+                <hr>
+            </div>
+            <div>
+                <img src="https://lmsin.net/cdn-cgi/image/h=831,w=615,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000009689368-Green-DarkGreen-1000009689368_03-2100.jpg" alt="" class="imgratio_3">
+            </div>
+            <div>
+                <img src="https://lmsin.net/cdn-cgi/image/h=831,w=615,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000009689368-Green-DarkGreen-1000009689368_04-2100.jpg" alt="" class="imgratio_3">
+            </div>
+            <div><h3 class="js13">PROMOTION OFFER</h3>
+                <p class="js09">Buy 2 Get 60 Percent Off | Shop for Rs. 2,499 & Get 10% Off. <br> Code SALE10 | Get 400 Off on First Purchase of Rs.1,999 and <br> Above. Code NEW400 Browse promotion</p>
+                <br>
+                <hr>
+
+                <h3>Click & Collect</h3>
+                <p class="js09">Order this product now and collect it from a store of your choice. Learn more</p>
+
+                <h3>Pay in installments</h3>
+                <p class="js09">Pay in easy installments on orders of ₹ 3,000 or more. Available for select banks. Learn more</p>
+                
+                <h3>When will I receive my order?</h3>
+                <div class="js10">
+                    <div><input type="number" placeholder="Enter Your Pincode" class="js12" ></div>
+                    <div class="js11"> Check</div>
+                </div>  
+                <br><hr>  
+            </div>
+            <div>
+                <img src="https://lmsin.net/cdn-cgi/image/h=831,w=615,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000009689368-Green-DarkGreen-1000009689368_05-2100.jpg" alt="" class="imgratio_3">
+            </div>
+            <div>
+                <img src="https://lmsin.net/cdn-cgi/image/h=831,w=615,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000009689368-Green-DarkGreen-1000009689368_06-2100.jpg" alt="" class="imgratio_3">
+            </div>
+            <div>
+                <h4>Overview</h4>
+                <p>This sheath dress from our in-house brand is tailored with a typographic print, extended sleeves, and insert pockets. It also comes with a sash tie-up at the waist.</p>
+                <ul>
+                    <li>Type : Sheath</li>
+                    <li>Design : Graphic Print</li>
+                    <li>Neckline : Round Neck</li>
+                    <li>Length : Mini</li>
+                    <li>Sleeve Length : Cap Sleeves</li>
+                    <li>Fabric : Cotton</li>
+                    <li>Rise : Mini</li>
+                    <li>Care Instructions : Hand Wash</li>
+                    <li>Model Wears : Size S, has Height 5'7",Chest 33",and Waist 28"</li>
+                    <li>Country of Origin : India</li>
+                    <li>Manufactured By : Lifestyle Int Pvt Ltd, 77 Degree Town Centre, Building No. 3, West Wing, Off HAL Airport Road, Yamlur, Bangalore-560037</li>
+                    <li>For Consumer Complaints Contact : Manager Commercial, Lifestyle International Pvt. Ltd. 1800-123-1555</li>
+                    <li>Net Quantity : 1 N</li>
+                    <li>Sleeve Type : Extended Sleeves</li>
+                    <li>No. of Pockets : 2</li>
+                    <li>Occasion : Casual</li>
+                    <li>Product : Dress</li>
+                </ul>
+                <p class="js14"> Read Less</p>
+            </div>
+        </div>
+
+            <br>
+        
+            <div id="js15">
+                <h1>You may also like</h1>
+                <div class="js16">
+                    <div>
+                        <img src="https://6c819239693cc4960b69-cc9b957bf963b53239339d3141093094.lmsin.net/1000008557586-Pink-LightPink-1000008557586_01-345.jpg" alt="" class="imgratio1">
+                        <h4>₹ 499</h4>
+                        <h5>Ginger Women Solid Crop Tp with Sash </h5>
+                    </div>
+                    <div>
+                        <img src="https://6c819239693cc4960b69-cc9b957bf963b53239339d3141093094.lmsin.net/1000009718242-Silver-Silver-1000009718242_01-345.jpg" alt="" class="imgratio1">
+                        <h4>₹ 499</h4>
+                        <h5>Ginger Women Solid Crop Tp with Sash </h5>
+                    </div>
+                    <div>
+                        <img src="https://6c819239693cc4960b69-cc9b957bf963b53239339d3141093094.lmsin.net/1000009822425-Pink-Coral-1000009822425_01-345.jpg" alt="" class="imgratio1">
+                        <h4>₹ 499</h4>
+                        <h5>Ginger Women Solid Crop Tp with Sash </h5>
+                    </div>
+                    <div>
+                        <img src="https://6c819239693cc4960b69-cc9b957bf963b53239339d3141093094.lmsin.net/1000010018210-Black-Black-1000010018210_01-345.jpg" alt="" class="imgratio1">
+                        <h4>₹ 499</h4>
+                        <h5>Ginger Women Solid Crop Tp with Sash </h5>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+        
+            <div id="js15">
+                <h1>Customers Also Viewed</h1>
+                <div class="js16">
+                    <div>
+                        <img src="https://6c819239693cc4960b69-cc9b957bf963b53239339d3141093094.lmsin.net/1000009718242-Silver-Silver-1000009718242_01-345.jpg" alt="" class="imgratio1">
+                        <h4>₹ 499</h4>
+                        <h5>Ginger Women Solid Crop Tp with Sash </h5>
+                    </div>
+                    <div>
+                        <img src="https://6c819239693cc4960b69-cc9b957bf963b53239339d3141093094.lmsin.net/1000009822425-Pink-Coral-1000009822425_01-345.jpg" alt="" class="imgratio1">
+                        <h4>₹ 499</h4>
+                        <h5>Ginger Women Solid Crop Tp with Sash </h5>
+                    </div>
+                    <div>
+                        <img src="https://6c819239693cc4960b69-cc9b957bf963b53239339d3141093094.lmsin.net/1000009803565-Black-Black-1000009803565_01-345.jpg" alt="" class="imgratio1">
+                        <h4>₹ 499</h4>
+                        <h5>Ginger Women Solid Crop Tp with Sash </h5>
+                    </div>
+                    <div>
+                        <img src="https://6c819239693cc4960b69-cc9b957bf963b53239339d3141093094.lmsin.net/1000010018210-Black-Black-1000010018210_01-345.jpg" alt="" class="imgratio1">
+                        <h4>₹ 499</h4>
+                        <h5>Ginger Women Solid Crop Tp with Sash </h5>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div id="js15">
+                <h1>Recently Viewed Products</h1>
+                <div class="js16">
+                    <div>
+                        <img src="https://lmsin.net/cdn-cgi/image/h=345,w=345,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000008532724-Green-Olive-1000008532724_01-2100.jpg" alt="" class="imgratio1">
+                        <h4>₹ 499</h4>
+                        <h5>Ginger Women Solid Crop Tp with Sash </h5>
+                    </div>
+                    <div>
+                        <img src="https://lmsin.net/cdn-cgi/image/h=345,w=345,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000010224445-Green-Mint-1000010224445_01-2100.jpg" alt="" class="imgratio1">
+                        <h4>₹ 499</h4>
+                        <h5>Ginger Women Solid Crop Tp with Sash </h5>
+                    </div>
+                    <div>
+                        <img src="https://lmsin.net/cdn-cgi/image/h=345,w=345,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000009775949-Green-Olive-1000009775949_01-2100.jpg" alt="" class="imgratio1">
+                        <h4>₹ 499</h4>
+                        <h5>Ginger Women Solid Crop Tp with Sash </h5>
+                    </div>
+                    <div>
+                        <img src="https://lmsin.net/cdn-cgi/image/h=345,w=345,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000010368495-Blue-Lightblue-1000010368495_01-2100.jpg" alt="" class="imgratio1">
+                        <h4>₹ 499</h4>
+                        <h5>Ginger Women Solid Crop Tp with Sash </h5>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+            <hr id="underline">
+            <br><br>
+
+
+
+
+
+            <!-- Footer Part  -->
+        <div>
+            <div class="bestsellers_2">
+                <div>
+                    <h2>Subscribe to our awesome emails.</h2>
+                    <h4>Get our latest offers and news straight in your inbox.</h4>
+                    <input type="type" placeholder="Please enter an email address">
+                    <input type="Subscribe" placeholder="Subscribe" id="subscribebutton">
+                </div>
+                <div>
+                    <h2>Download our apps</h2>
+                    <h4>Shop our products and offers on-the-go.</h4>
+                    <img src="https://miro.medium.com/max/1200/1*V9-OPWpauGEi-JMp05RC_A.png" alt="" height="50px">
+                    <img src="https://miro.medium.com/max/1200/1*OIIv4FEjJQMqh-zEPhtlYA.png" alt="" height="50px">
+                </div>
+            </div>
+        </div>
+
+        <hr id="underline">
+
+        <div id="footer_1">
+            <div>
+                <h3>Women</h3>
+                <p>Top</p>
+                <p>Ethnicwear</p>
+                <p>Bottoms</p>
+                <p>Dresses & Jumpsits</p>
+                <p>Winterwear</p>
+                <p>Lingries</p>
+                <p>Nightwear</p>
+                <p>Sportwear</p>
+                <p>Beauty</p>
+                <p>Watches & Sunglasses</p>
+            </div>
+            <div>
+                <h3>Men</h3>
+                <p>Tops</p>
+                <p>Bottoms</p>
+                <p>Ethnicwear</p>
+                <p>Sportwear</p>
+                <p>Innerware</p>
+                <p>Grooming</p>
+                <p>Watches</p>
+                <p>Sunglasses</p>
+            </div>
+            <div>
+                <h3>Kids</h3>
+                <p>Girls Clothing</p>
+                <p>Boys Clothing</p>
+                <p>Infrants Girls</p>
+                <p>Infrants Boys</p>
+                <p>Winterwear</p>
+                <p>Add ons</p>
+                <p>The teen Shop</p>
+            </div>
+            <div>
+                <h3>Shoes & Bags</h3>
+                <p>Women</p>
+                <p>Men</p>
+                <p>Boys</p>
+                <p>Girls</p>
+                <p>Women Accessories</p>
+                <p>Men Accessories</p>
+                <p></p>
+            </div>
+            <div>
+                <h3>Explore</h3>
+                <p>Online offer</p>
+                <p>Store offer</p>
+                <p>Online gift card</p>
+                <p>Store Nearby</p>
+                <p>Edge Membership</p>
+                <p>Refer & Win</p>
+                <p>Shop on WhatsApp</p>
+                <p>Fashion Vlog</p>
+                <p>Join CIRCLEMANG</p>
+                <p>SBI offers</p>
+                <p>Homecentre</p>
+            </div>
+            <div>
+                <h3>About</h3>
+                <p>About Us</p>
+                <p>Careers</p>
+                <p>Take a Tour</p>
+                <p>Blog</p>
+                <p>Store Locator</p>
+                <p>Landmark Cares</p>
+            </div>
+            <div>
+                <h3>Help</h3>
+                <p>Contact us</p>
+                <p>Shipping</p>
+                <p>Return Process</p>
+                <p>Return Policy</p>
+                <p>Help Centre</p>
+            </div>
+        </div>
+
+        <hr id="underline">
+
+    </div>
+</body>
+</html>
+
+
+
+<script>
+    document.querySelector("#js08").addEventListener("click",function(){
+        window.location.href = "cartpage.html";
+    });
+</script>

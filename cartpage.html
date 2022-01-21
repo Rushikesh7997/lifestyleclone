@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <style>
+        .container{
+            /* border: teal solid 1px; */
+            margin: auto;
+            width: 95%;
+        }
+        .js001{
+            border: rgb(197, 160, 160) solid 2px;
+            height: 80px;
+            padding: 10px;
+        }
+        .js001>p{
+            color: orangered;
+            margin-left: 5px;
+        }
+        .js002{
+            display: flex;
+        }
+        .js003{
+            /* border: orangered solid 1px; */
+            width: 70%;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
+        .js004{
+            /* border: turquoise solid 1px; */
+            width: 29%;
+            margin-left: 10px;
+            display: flex;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
+        .js004>div{
+            /* border: black solid 1px; */
+            width: 300px;
+
+        }
+        .js005{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(1,1fr);
+            grid-gap: 10px;
+        }
+        .js005>div{
+            /* border: black solid 1px; */
+
+        }
+        .js07{
+            /* border: grey solid 1px; */
+            height: 12px;
+            width: 13px;
+            margin-left: 15px;
+            margin-top: 15px;
+            padding: 25px;
+        }
+        .js008{
+            text-align: right;
+        }
+        .js008>p{
+            color: green;
+        }
+        #js010{
+            /* border: #faa619 solid 1px; */
+            width: 330px;
+            height: 50px;
+            /* padding: 20px 100px; */
+            background-color: #faa619;
+            color: white;
+            font-size: 21px;
+        }
+        .js009{
+            text-align: right;
+            margin-right: 20px;
+            margin-top: 5px;
+        }
+        .js011{
+            /* border: black solid 1px; */
+            width: 70%;
+            height: 100px;
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            grid-template-rows: repeat(1,1fr);
+        }
+        .js011>div{
+            /* border: chocolate solid 1px; */
+        }
+        .imgratio_3{
+            height: 100%;
+            width: 100%;
+        }
+        .bestsellers_2{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(1,1fr);
+            grid-gap: 20px;
+        }
+        .bestsellers_2>div{
+            /* border: rebeccapurple solid 1px; */
+            /* height: 300px; */
+            
+        }
+        .bestsellers_2>div{
+            /* border: black solid 1px; */
+        }
+        input{
+            width: 200px;
+            height: 40px;
+        }
+        #subscribebutton{
+            width: 150px;
+            height: 41px;
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+        #footer_1{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(2,1fr);
+            grid-gap: 20px;
+        }
+        #footer_1>div{
+            /* border: black solid 1px; */
+        }
+        #footer_1>div>h3{
+            font-weight: bold;
+        }
+        #footer_1>div>p{
+            color: rgb(97, 94, 94);
+            font-size: 15px;
+            line-height: 10px;
+        }
+        #navbar_1{
+            height: 50px;
+            background-color: black;
+            display: flex;
+        }
+        .navbar_2{
+            display: flex;
+        }
+        .navbar_2>div{
+            /* border: blanchedalmond solid 1px; */
+            height: 50px;
+            width: 130px;
+            margin-left: 40px;
+        }
+        .navbar_3{
+            display: flex;
+            margin-left: 500px;
+        }
+        .navbar_3>div{
+            /* border: red solid 1px; */
+            height: 50px;
+            width: 100px;
+        }
+        .navbar_2>div>h4{
+            color: white;
+        }
+        .navbar_3>div>h5{
+            color: white;
+            text-align: right;
+        }
+        #navbar_4{
+            /* border: darkblue solid 1px; */
+            height: 80px;
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(219, 217, 217);
+            cursor: pointer;
+        }
+        .topnav {
+            overflow: hidden;
+        }
+
+        .topnav .search-container {
+            float: right;
+        }
+
+        .topnav input[type=text] {
+            padding: 6px 80px;
+            margin-top: 15px;
+            font-size: 17px;
+            border: none;
+        
+        }
+
+        .topnav .search-container button:hover {
+             background: #ccc;
+        }
+        #navbar_5{
+            /* border: darkblue solid 1px; */
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="navbar_1">
+            <div class="navbar_2">
+                <div>
+                    <h4>Free Shipping</h4>
+                </div>
+                <div>
+                    <h4>Click & Collect</h4>
+                </div>
+                <div>
+                    <h4>Return To Store</h4>
+                </div>
+            </div>
+            <div class="navbar_3">
+                <div>
+                    <h5>Download</h5>
+                </div>
+                <div>
+                    <h5>Store Locator</h5>
+                </div>
+                <div>
+                    <h5>Help</h5>
+                </div>
+            </div>
+        </div>
+
+        <div id="navbar_4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIqLdSG_DkYbMHe1n9Rb7dzDuH37SQuDp_WKHoI2MwMzz8wSAv" alt="" height="100%" >
+            <h3>Women</h3>
+            <h3>Men</h3>
+            <h3>Kids</h3>
+            <h3>Shoes & Bags</h3>
+            <div class="topnav">
+                <div class="search-container">
+                <form>
+                    <input type="text" placeholder="What are you looking for?" name="search">
+                </form>
+                </div>
+            </div> 
+            <h3>Sign In</h3>
+            <h3>Basket <i class="fas fa-shopping-bag"></i></h3>
+
+        </div>
+
+        <div id="navbar_5">
+            <p>Ethnic & Fusion Wear</p>
+            <p>Westrn Wear</p>
+            <p>Lingerie/Sleepwear</p>
+            <p>Top Brands</p>
+            <p>SportsWear</p>
+            <p>PlusSize</p>
+            <p>WinterWear</p>
+            <p>SizeStore</p>
+            <p>Beauty</p>
+            <p>Footwear/Bags</p>
+            <p>Watches</p>
+            <p>Jewellery</p>
+            <p>|</p>
+            <p>More</p>
+
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <h1>
+                Your Shooping Basket (1 Item)
+            </h1>
+        </div>
+        <div class="js001">
+            <p>Get the offer</p>
+            <li>Shop for Rs. 2,999 and Get 10% Off. Use Code:SALE10 | get Rs. 400 Off on First Purshase of Rs.1,999 ad above. Use Code: New400</li>
+        </div>
+        <br>
+        <div class="js002">
+            <div class="js003">
+                <div class="js005">
+                    <div><img src="https://lmsin.net/cdn-cgi/image/h=150,w=150,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000009689368-Green-DarkGreen-1000009689368_01-2100.jpg" alt=""></div>
+                    <div>
+                        <p>GINGER Women Typographic Print Sheath Dress</p>
+                        <p>Colour:Green</p>
+                        <p>Size:M</p>
+                    </div>
+                    <div>
+                        <h3>Price</h3>
+                        <h3>₹2299</h3>
+                        <h3>₹1149</h3>
+                    </div>
+                    <div>
+                        <h3>Quantity</h3>
+                        <div class="js07">1</div>
+                    </div>
+                    <div>
+                        <h3>Total</h3>
+                        <h3>₹1149</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="js004">
+                <div>
+                    <p>Subtotal:</p>
+                    <p>Standard Ground Shipping:</p>
+                    <p>Offer Saving:</p>
+                    <hr>
+                    <h3>Total</h3>
+                </div>
+                <div class="js008"> 
+                    <p>₹2299</p>
+                    <p>Free</p>
+                    <p>₹1149</p>
+                    <hr>
+                    <h3>₹1149</h3>
+                </div>
+            </div>   
+        </div>
+        <div class="js009">
+            <button id="js010">Proceed to Checkout</button>
+        </div>
+        <hr>
+        <div>
+            <p>Ways to Pay</p>
+            <div class="js011">
+                <div>
+                    <img src="https://i1.lmsin.net/website_images/ae/checkout/logo-visa.png" alt="" class="imgratio_3">
+                </div>
+                <div>
+                    <img src="https://i1.lmsin.net/website_images/ae/checkout/logo-mc.png" alt="">
+                </div>
+                <div>
+                    <img src="https://i1.lmsin.net/website_images/in/checkout/logo-rupay.svg" alt="">
+                </div>
+                <div>
+                    <img src="https://i1.lmsin.net/website_images/ae/checkout/logo-cash.png" alt="">
+                </div>
+                <div>
+                    <img src="https://i1.lmsin.net/website_images/in/checkout/logo-netbanking.svg" alt="">
+                </div>
+                <div>
+                    <img src="https://i1.lmsin.net/website_images/in/checkout/logo-wallet.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <hr>
+        <br><br>
+         <!-- Footer Part  -->
+         <div>
+            <div class="bestsellers_2">
+                <div>
+                    <h2>Subscribe to our awesome emails.</h2>
+                    <h4>Get our latest offers and news straight in your inbox.</h4>
+                    <input type="type" placeholder="Please enter an email address">
+                    <input type="Subscribe" placeholder="Subscribe" id="subscribebutton">
+                </div>
+                <div>
+                    <h2>Download our apps</h2>
+                    <h4>Shop our products and offers on-the-go.</h4>
+                    <img src="https://miro.medium.com/max/1200/1*V9-OPWpauGEi-JMp05RC_A.png" alt="" height="50px">
+                    <img src="https://miro.medium.com/max/1200/1*OIIv4FEjJQMqh-zEPhtlYA.png" alt="" height="50px">
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr id="underline">
+        <br>
+        <div id="footer_1">
+            <div>
+                <h3>Women</h3>
+                <p>Top</p>
+                <p>Ethnicwear</p>
+                <p>Bottoms</p>
+                <p>Dresses & Jumpsits</p>
+                <p>Winterwear</p>
+                <p>Lingries</p>
+                <p>Nightwear</p>
+                <p>Sportwear</p>
+                <p>Beauty</p>
+                <p>Watches & Sunglasses</p>
+            </div>
+            <div>
+                <h3>Men</h3>
+                <p>Tops</p>
+                <p>Bottoms</p>
+                <p>Ethnicwear</p>
+                <p>Sportwear</p>
+                <p>Innerware</p>
+                <p>Grooming</p>
+                <p>Watches</p>
+                <p>Sunglasses</p>
+            </div>
+            <div>
+                <h3>Kids</h3>
+                <p>Girls Clothing</p>
+                <p>Boys Clothing</p>
+                <p>Infrants Girls</p>
+                <p>Infrants Boys</p>
+                <p>Winterwear</p>
+                <p>Add ons</p>
+                <p>The teen Shop</p>
+            </div>
+            <div>
+                <h3>Shoes & Bags</h3>
+                <p>Women</p>
+                <p>Men</p>
+                <p>Boys</p>
+                <p>Girls</p>
+                <p>Women Accessories</p>
+                <p>Men Accessories</p>
+                <p></p>
+            </div>
+            <div>
+                <h3>Explore</h3>
+                <p>Online offer</p>
+                <p>Store offer</p>
+                <p>Online gift card</p>
+                <p>Store Nearby</p>
+                <p>Edge Membership</p>
+                <p>Refer & Win</p>
+                <p>Shop on WhatsApp</p>
+                <p>Fashion Vlog</p>
+                <p>Join CIRCLEMANG</p>
+                <p>SBI offers</p>
+                <p>Homecentre</p>
+            </div>
+            <div>
+                <h3>About</h3>
+                <p>About Us</p>
+                <p>Careers</p>
+                <p>Take a Tour</p>
+                <p>Blog</p>
+                <p>Store Locator</p>
+                <p>Landmark Cares</p>
+            </div>
+            <div>
+                <h3>Help</h3>
+                <p>Contact us</p>
+                <p>Shipping</p>
+                <p>Return Process</p>
+                <p>Return Policy</p>
+                <p>Help Centre</p>
+            </div>
+        </div>
+
+        <hr id="underline">
+
+
+        <br>
+    </div>
+</body>
+</html>
+
+
+<script>
+    document.querySelector("#js010").addEventListener("click",function(){
+        window.location.href = "loginpage.html";
+    });
+</script>

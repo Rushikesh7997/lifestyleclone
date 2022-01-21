@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header001{
+  border: black solid 1px;
+  height: 90px;
+  width: 100%;
+  padding: 20px;
+}
+.row {
+  margin: 0 -16px;
+  display: flex;
+}
+
+
+.col-50{
+  width: 500px;
+  margin-left: 50px;
+ padding-top: 20px;
+}
+.js00001{
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.col-25{
+  margin-left: 300px;
+  margin-top: 50px;
+}
+
+.container {
+  /* background-color: #f2f2f2; */
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+#btn {
+  background-color: #faa619;
+  color: white;
+  padding: 12px;
+  margin: 10px 90px;
+  border: none;
+  width: 50%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+.bestsellers_2{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(1,1fr);
+            grid-gap: 20px;
+        }
+        .bestsellers_2>div{
+            /* border: rebeccapurple solid 1px; */
+            height: 300px;
+            
+        }
+        .bestsellers_2{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(1,1fr);
+            grid-gap: 20px;
+        }
+        .bestsellers_2>div{
+            /* border: black solid 1px; */
+        }
+        .subscribebox12{
+            width: 200px;
+            height: 40px;
+        }
+        #subscribebutton{
+            width: 150px;
+            height: 41px;
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+        #footer_1{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(2,1fr);
+            grid-gap: 20px;
+        }
+        #footer_1>div{
+            /* border: black solid 1px; */
+        }
+        #footer_1>div>h3{
+            font-weight: bold;
+        }
+        #footer_1>div>p{
+            color: rgb(97, 94, 94);
+            font-size: 15px;
+            line-height: 10px;
+        }
+
+</style>
+</head>
+<body>
+<div>
+  
+</div>
+<div class="header001">
+<img src="https://i1.lmsin.net/website_images/in/logos/logo-lifestyle.svg" alt="">
+</div>
+<h1>Select a Shipping method</h1>
+<div class="box123">
+  <div class="col-75">
+    <div class="container">
+      <form>
+      
+        <div class="row">
+          <div class="col-50">
+            <h3>Add Your Shipping Address</h3>
+            <label for="fname">Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Enter youur Full Name">
+            <label for="number">Mobile Number</label>
+            <input type="text" id="email" placeholder="Enter your mobile number">
+            <label for="adr">Pincode</label>
+            <input type="text" id="adr" name="address" placeholder="Enter your Pincode">
+            <label for="city"> City</label>
+            <input type="text" id="city" name="city" placeholder="Select your city or town">
+            <label for="email">State</label>
+            <input type="text" id="email" name="email" placeholder="Select your State">
+            <label for="adr">Building name or Number</label>
+            <input type="text" id="adr" name="address" placeholder="Enter your Building Name">
+            <label for="city">Street name or number</label>
+            <input type="text" id="city" name="city" placeholder="Flat/House number, Floor">
+            <label for="city">Landmark</label>
+            <input type="text" id="city" name="city" placeholder="Landmark">
+            <label for="city">Address Type</label>
+            <input type="radio" value="HTML"> Home 
+            <input type="radio" value="HTML"> Office
+          </div>
+
+
+          <div class="col-25">
+            <div class="container">
+              <h4>Your order summary <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>1</b></span></h4>
+              <hr>
+              <p>Lifestyle</p> 
+              <img src="https://lmsin.net/cdn-cgi/image/h=150,w=150,q=60,fit=cover/https://aaeff43fe32172cbcecc-ae2a4e9a8cbc330ede5588dedf56886e.lmsin.net/lifestyle/1000009689368-Green-DarkGreen-1000009689368_01-2100.jpg" alt="" height="80px">
+              <p><a href="./shooping.html">Ginger Women Typographic Print Sheth dress</a></p>
+              <p>Qty: 2</a></p>
+              <p> Price</a> <span class="price">₹1149</span></p>
+              <hr>
+              <p>Total <span class="price" style="color:black"><b>₹1149</b></span></p>
+            </div>
+          </div>
+        </div>
+
+    
+      </form>
+    </div>
+  </div>
+  <br><br><hr><br><br>
+
+
+  <div class="js00001">
+    <div class="col-50">
+
+      <h3>Payment</h3>
+      <label for="fname">Accepted Cards</label>
+      <div class="icon-container">
+        <i class="fa fa-cc-visa" style="color:navy;"></i>
+        <i class="fa fa-cc-amex" style="color:blue;"></i>
+        <i class="fa fa-cc-mastercard" style="color:red;"></i>
+        <i class="fa fa-cc-discover" style="color:orange;"></i>
+      </div>
+      <label for="cname">Name on Card</label>
+      <input type="text" id="cname" name="cardname" placeholder="Name on card">
+      <label for="ccnum">Credit card number</label>
+      <input type="text" id="ccnum" name="cardnumber" placeholder="Enter your 16 digit card number">
+      <label for="expmonth">Exp Month</label>
+      <input type="text" id="expmonth" name="expmonth" placeholder="mm">
+      <div class="row">
+        <div class="col-50">
+          <label for="expyear">Exp Year</label>
+          <input type="text" id="expyear" name="expyear" placeholder="Year">
+        </div>
+        <div class="col-50">
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" name="cvv" placeholder="CVV">
+        </div>
+      </div>
+
+      
+      <br>
+      <input type="submit" value="Continue to checkout" id="btn">
+    </div>
+  </div>  
+
+
+
+  <div>
+    <div class="bestsellers_2">
+        <div>
+            <h2>Subscribe to our awesome emails.</h2>
+            <h4>Get our latest offers and news straight in your inbox.</h4>
+            <input type="type" placeholder="Please enter an email address" class="subscribebox12">
+            <input type="Subscribe" placeholder="Subscribe" id="subscribebutton">
+        </div>
+        <div>
+            <h2>Download our apps</h2>
+            <h4>Shop our products and offers on-the-go.</h4>
+            <img src="https://miro.medium.com/max/1200/1*V9-OPWpauGEi-JMp05RC_A.png" alt="" height="50px">
+            <img src="https://miro.medium.com/max/1200/1*OIIv4FEjJQMqh-zEPhtlYA.png" alt="" height="50px">
+        </div>
+    </div>
+</div>
+
+<hr id="underline">
+
+<div id="footer_1">
+    <div>
+        <h3>Women</h3>
+        <p>Top</p>
+        <p>Ethnicwear</p>
+        <p>Bottoms</p>
+        <p>Dresses & Jumpsits</p>
+        <p>Winterwear</p>
+        <p>Lingries</p>
+        <p>Nightwear</p>
+        <p>Sportwear</p>
+        <p>Beauty</p>
+        <p>Watches & Sunglasses</p>
+    </div>
+    <div>
+        <h3>Men</h3>
+        <p>Tops</p>
+        <p>Bottoms</p>
+        <p>Ethnicwear</p>
+        <p>Sportwear</p>
+        <p>Innerware</p>
+        <p>Grooming</p>
+        <p>Watches</p>
+        <p>Sunglasses</p>
+    </div>
+    <div>
+        <h3>Kids</h3>
+        <p>Girls Clothing</p>
+        <p>Boys Clothing</p>
+        <p>Infrants Girls</p>
+        <p>Infrants Boys</p>
+        <p>Winterwear</p>
+        <p>Add ons</p>
+        <p>The teen Shop</p>
+    </div>
+    <div>
+        <h3>Shoes & Bags</h3>
+        <p>Women</p>
+        <p>Men</p>
+        <p>Boys</p>
+        <p>Girls</p>
+        <p>Women Accessories</p>
+        <p>Men Accessories</p>
+        <p></p>
+    </div>
+    <div>
+        <h3>Explore</h3>
+        <p>Online offer</p>
+        <p>Store offer</p>
+        <p>Online gift card</p>
+        <p>Store Nearby</p>
+        <p>Edge Membership</p>
+        <p>Refer & Win</p>
+        <p>Shop on WhatsApp</p>
+        <p>Fashion Vlog</p>
+        <p>Join CIRCLEMANG</p>
+        <p>SBI offers</p>
+        <p>Homecentre</p>
+    </div>
+    <div>
+        <h3>About</h3>
+        <p>About Us</p>
+        <p>Careers</p>
+        <p>Take a Tour</p>
+        <p>Blog</p>
+        <p>Store Locator</p>
+        <p>Landmark Cares</p>
+    </div>
+    <div>
+        <h3>Help</h3>
+        <p>Contact us</p>
+        <p>Shipping</p>
+        <p>Return Process</p>
+        <p>Return Policy</p>
+        <p>Help Centre</p>
+    </div>
+</div>
+  
+</div>
+
+</body>
+</html>
+
+
+<script>
+  document.querySelector("#btn").addEventListener("click",function(){
+        window.location.href = "thankyoupage.html";
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
